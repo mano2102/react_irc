@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listeners</title>
+    <style>
+        body{
+            height: 500vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+  
+
+       <input id="uname" />
+       <button id="mybutton" onclick="handleLogin()">Click</button>
+ 
+
+    <script>
+        //click
+        document.getElementById("mybutton").addEventListener('click',function handleClick(){
+            // alert("Button clicked")
+        })
+        //scroll
+        window.addEventListener('scroll',function handleScroll(){
+            // alert("scrolled")
+        })
+        //MOUSE OVER EVENT LISTENER
+       document.getElementById("mybutton").addEventListener("mouseover",function mouseOver(){
+        //    alert("mouse hovered")
+       })
+       //keyboard events
+       document.getElementById("uname").addEventListener("keypress",function keyPress(){
+        // alert("Enter key is pressed")
+       })
+      function handleLogin(){
+        var uname=document.getElementById("uname").value;
+        console.log(uname)
+      }
+      
+    </script>
+</body>
+</html>

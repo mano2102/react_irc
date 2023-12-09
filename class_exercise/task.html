@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <table id="tab">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tbody>
+            <tr id="trow">
+                <td id="name"></td>
+                <td id="email"></td>
+                <td id="phone"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const data = {
+            "name": "sample",
+            "email": "sample@gmail.com",
+            "phone": "12346567890"
+        }
+        
+    
+    
+        function handleData(data) {
+            var tab = document.getElementById("tab");
+            var name = document.getElementById("name");
+           var email=document.getElementById("email");
+           var phone =document.getElementById("phone");
+            // Set the data in the table cell
+            name.innerHTML = data.name;
+            email.innerHTML=data.email;
+            phone.innerHTML=data.name;
+
+
+
+            // You can repeat the above for other properties (email and phone) if needed.
+        }
+
+        // Call the function with the provided data
+        handleData(data);
+    </script>
+    
+</body>
+</html>
